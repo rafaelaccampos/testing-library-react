@@ -35,7 +35,10 @@ test('Deve renderizar uma lista de links com a classe link', () => {
 
 test('Deve renderizar uma lista de links com a classe link', () => {
   render(<Menu />);
+
   const links = screen.getAllByRole('link');
+
   links.forEach((link) => expect(link).toHaveClass('links'));
+
   expect(links).toMatchSnapshot();
 });
